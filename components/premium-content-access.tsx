@@ -99,11 +99,10 @@ export function PremiumContentAccess() {
 			<div className="container mx-auto px-4 md:px-6">
 				<div className="text-center mb-8">
 					<h2 className="text-3xl md:text-4xl font-bold mb-4">
-						Acesso grátis a conteúdos Premium!
+						Tenha Acesso Grátis a Conteúdos Premium
 					</h2>
 					<p className="text-lg text-gray-600 max-w-3xl mx-auto">
-						Em planos selecionados de hospedagem e revenda você terá acesso a
-						downloads de conteúdos premiums gratuitamente.
+						Ao contratar determinados planos de hospedagem, você desbloqueia o acesso a uma seleção incrível de materiais premium — sem pagar nada a mais por isso!
 					</p>
 				</div>
 

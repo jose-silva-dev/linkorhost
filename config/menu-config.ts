@@ -24,18 +24,23 @@ export const menuItems = [
 		id: "hospedagem",
 		items: [
 			{
-				title: "Hospedagem cPanel",
-				href: "https://app.linkor.host/store/hospedagem-cpanel",
+				title: "Hospedagem de Site",
+				href: "https://app.linkor.host/store/hospedagem-de-site",
 				icon: Database,
 			},
 			{
-				title: "Hospedagem Plesk",
-				href: "https://app.linkor.host/store/hospedagem-plesk",
+				title: "Hospedagem em Cloud",
+				href: "https://app.linkor.host/store/",
 				icon: Database,
 			},
 			{
-				title: "Hospedagem Cpanel Gamer",
-				href: "https://app.linkor.host/store/hospedagem-cpanel-gamer",
+				title: "Hospedagem Wordpress",
+				href: "https://app.linkor.host/store/",
+				icon: Database,
+			},
+			{
+				title: "Hospedagem de Site Gamer",
+				href: "https://app.linkor.host/store/hospedagem-de-site-gamer",
 				icon: Database,
 			},
 		],

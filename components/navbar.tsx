@@ -41,29 +41,29 @@ const ServidoresMegaMenu = () => {
 					</div>
 					{[
 						{
-							href: "/semi-dedicado",
+							href: "https://app.linkor.host/store/vps-amd-ryzen-9-7900x",
 							icon: Box,
-							title: "Semi Dedicado",
-							description: "Servidores custo-benefício único.",
+							title: "AMD Ryzen™ 9 7900X",
+							description: "Para quem busca ultra-performance.",
 						},
 						{
-							href: "/vps-trader",
+							href: "https://app.linkor.host/store/vps-amd-ryzen-9-5900x",
 							icon: Box,
-							title: "VPS Trader",
-							description: "Servidor veloz para traders.",
+							title: "AMD Ryzen™ 9 5900X",
+							description: "Para quem busca performance.",
 						},
 						{
-							href: "/fivem",
+							href: "https://app.linkor.host/store/vps-intel-qct-de-alta-densidade",
 							icon: Box,
-							title: "VPS FiveM",
-							description: "Hospedagem de FiveM.",
+							title: "Intel(R) Xeon(R) Platinum",
+							description: "Para quem busca confiabilidade.",
 						},
-						{
-							href: "/redm",
-							icon: Box,
-							title: "VPS RedM",
-							description: "Hospedagem de RedM.",
-						},
+						// {
+						// 	href: "/redm",
+						// 	icon: Box,
+						// 	title: "VPS RedM",
+						// 	description: "Hospedagem de RedM.",
+						// },
 					].map((item, index) => (
 						<Link href={item.href} key={`1${index}${item.href}`}>
 							<div className="p-2 hover:bg-[#303030] rounded-lg flex gap-2">
@@ -83,7 +83,7 @@ const ServidoresMegaMenu = () => {
 						</Link>
 					))}
 				</div>
-				<Link href="/vps-neon">
+				<Link href="">
 					<div className="relative bg-gradient-to-b from-[#F04339] to-[#FF6B5B] h-52 rounded-lg">
 						<div className="absolute bottom-0 p-4">
 							<div className="relative mb-2">
@@ -94,7 +94,7 @@ const ServidoresMegaMenu = () => {
 									height="60"
 								/>
 							</div>
-							<p className="text-lg font-bold">Ryzen 9 7900x</p>
+							<p className="text-lg font-bold">Servidores AMD & Intel</p>
 							<p>Servidores localizados em São Paulo.</p>
 						</div>
 					</div>
@@ -102,21 +102,21 @@ const ServidoresMegaMenu = () => {
 				<div className="">
 					<div className="pl-2 opacity-80 text-xs pb-2">
 						DEDICADOS
-						<div className="relative w-[70px] h-[1px] bg-gradient-to-r from-[#F04339] to-[#FF6B5B]" />
+						<div className="relative w-[72px] h-[1px] bg-gradient-to-r from-[#F04339] to-[#FF6B5B]" />
 					</div>
 					{[
 						{
-							href: "/baremetal",
+							href: "#",
 							icon: HardDrive,
 							title: "Baremetal",
 							description:
 								"Seu próprio dedicado, não compartilha recursos com ninguém.",
 						},
 						{
-							href: "/colocation",
+							href: "#",
 							icon: Server,
 							title: "Colocation",
-							description: "Hospeda seu servidor em nossa infraestrutura.",
+							description: "Hospeda seu servidor em nossa infraestrutura, totalmente gerenciada.",
 						},
 					].map((item, index) => (
 						<Link href={item.href} key={`2${index}${item.href}`}>
@@ -139,21 +139,21 @@ const ServidoresMegaMenu = () => {
 				</div>
 				<div className="">
 					<div className="pl-2 opacity-80 text-xs pb-2">
-						COLOCATION
-						<div className="relative w-[75px] h-[1px] bg-gradient-to-r from-[#F04339] to-[#FF6B5B]" />
+						RECURSOS
+						<div className="relative w-[70px] h-[1px] bg-gradient-to-r from-[#F04339] to-[#FF6B5B]" />
 					</div>
 					{[
 						{
-							href: "/status-rede",
+							href: "https://status.linkor.host/",
 							icon: Signal,
 							title: "Status da Rede",
-							description: "Mantenha-se informado do nosso status de rede.",
+							description: "Mantenha-se informado do nosso status de rede dos servidores da Linkor.",
 						},
 						{
-							href: "/area-cliente",
+							href: "https://app.linkor.host/clientarea.php",
 							icon: User,
 							title: "Área do Cliente",
-							description: "Acesse sua conta e gerencie seus serviços.",
+							description: "Acesse sua conta e gerencie seus serviços, tudo em um só lugar.",
 						},
 					].map((item, index) => (
 						<Link href={item.href} key={`3${index}${item.href}`}>
@@ -563,14 +563,14 @@ export default function Navbar() {
 															DEDICADOS
 														</p>
 														<Link
-															href="/baremetal"
+															href="#"
 															className="block text-gray-300 hover:text-white py-2"
 														>
 															<Box className="h-4 w-4 inline mr-2 text-[#F04339]" />
 															Baremetal
 														</Link>
 														<Link
-															href="/colocation"
+															href="#"
 															className="block text-gray-300 hover:text-white py-2"
 														>
 															<Box className="h-4 w-4 inline mr-2 text-[#F04339]" />

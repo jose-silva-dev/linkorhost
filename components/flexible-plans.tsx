@@ -144,14 +144,15 @@ export function FlexiblePlans() {
     <section className="py-16 bg-[#0C0C17] w-full">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-start max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-4 mx-auto">Planos Flexíveis para <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F04339] to-[#FF6B5B]">
-                Cada Negócio
+          <h2 className="text-4xl font-bold text-white mb-4 mx-auto">Servidores Virtualizados & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F04339] to-[#FF6B5B]">
+                Dedicados
               </span></h2>
-          <p className="text-gray-400 text-lg mb-12 text-center">
-            Com nossa plataforma, você cria servidores de alto desempenho com facilidade. Oferecemos VPS otimizados para
-            garantir a melhor experiência.
-          </p>
-
+          <div className="w-full flex justify-center">
+             <p className="text-gray-400 text-lg mb-12 text-center">
+               Liberdade para criar, poder para dominar!
+              </p>
+          </div>
+          
           {/* Seleção de processadores */}
           <div className="flex flex-wrap gap-4 mb-8 w-full justify-center">
             {processors.map((proc) => (

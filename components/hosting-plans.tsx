@@ -47,89 +47,97 @@ interface HostingPlan {
 
 const cpanelPlans = [
 	{
-		id: "starter",
-		name: "Starter",
-		price: "19,90",
-		annualPrice: "15,90",
-		storage: "10 GB SSD NVMe",
+		id: "essencial",
+		name: "Essencial",
+		price: "29,99",
+		annualPrice: "17,99",
+		storage: "10 GB SSD",
 		bandwidth: "Ilimitado",
-		domains: "1 domínio",
-		databases: "5 MySQL",
+		domains: "Tenha sites ilimitados",
+		databases: "Bancos de dados Ilimitados",
 		features: [
-			{ text: "cPanel Completo", included: true },
+			{ text: "1 Licença cPanel", included: true },
 			{ text: "Certificado SSL Grátis", included: true },
-			{ text: "5 Contas de Email", included: true },
+			{ text: "Email @seudominio.com.br", included: true },
 			{
-				text: "Backup Diário",
+				text: "Backup grátis todos os dias",
 				included: true,
 				tooltip: "Backups automáticos com retenção de 7 dias",
 			},
-			{ text: "Construtor de Sites", included: false },
-			{ text: "Proteção Cloudflare", included: false },
-			{ text: "LiteSpeed Web Server", included: true, highlight: true },
-			{ text: "PHP 8.2", included: true },
-			{ text: "Instalador de aplicativos", included: true },
-			{ text: "Migração gratuita", included: true },
+			{ text: "Certificado de segurança SSL", included: true },
+			{ text: "Proteção Cloudflare", included: true },
+			{ text: "LiteSpeed Web Server", included: true, highlight: false },
+			{ text: "Seletor PHP 5.6 a 8.4", included: true },
+			{ text: "Migração de site grátis", included: true },
+			{ text: "PHP + NodeJS + Ruby + Python", included: true },
+		    { text: "Cache avançado", included: true },
+			{ text: "Bônus PRO DOWNLOADS", included: true },
+			{ text: "IP dedicado", included: false, highlight: true },
+			{ text: "Recursos dedicados", included: false, highlight: true },
+			{ text: "Suporte prioritário", included: false, highlight: true },
 		],
 	},
 	{
-		id: "business",
-		name: "Business",
-		price: "39,90",
-		annualPrice: "31,90",
-		storage: "25 GB SSD NVMe",
+		id: "expansao",
+		name: "Expansão",
+		price: "39,99",
+		annualPrice: "23,99",
+		storage: "50 GB NVMe",
 		bandwidth: "Ilimitado",
-		domains: "5 domínios",
-		databases: "20 MySQL",
+		domains: "Tenha sites ilimitados",
+		databases: "Bancos de dados Ilimitados",
 		features: [
-			{ text: "cPanel Completo", included: true },
+			{ text: "1 Licença cPanel", included: true },
 			{ text: "Certificado SSL Grátis", included: true },
-			{ text: "20 Contas de Email", included: true },
+			{ text: "Email @seudominio.com.br", included: true },
 			{
-				text: "Backup Diário",
+				text: "Backup grátis todos os dias",
 				included: true,
-				tooltip: "Backups automáticos com retenção de 15 dias",
+				tooltip: "Backups automáticos com retenção de 7 dias",
 			},
-			{ text: "Construtor de Sites", included: true, highlight: true },
-			{ text: "Proteção Cloudflare", included: true, highlight: true },
-			{ text: "LiteSpeed Web Server", included: true },
-			{ text: "PHP 8.2", included: true },
-			{ text: "Instalador de aplicativos", included: true },
-			{ text: "Migração gratuita", included: true },
-			{ text: "Cache avançado", included: true, highlight: true },
-			{ text: "CDN integrada", included: true },
+			{ text: "Certificado de segurança SSL", included: true },
+			{ text: "Proteção Cloudflare", included: true },
+			{ text: "LiteSpeed Web Server", included: true, highlight: false },
+			{ text: "Seletor PHP 5.6 a 8.4", included: true },
+			{ text: "Migração de site grátis", included: true },
+			{ text: "PHP + NodeJS + Ruby + Python", included: true },
+		    { text: "Cache avançado", included: true },
+			{ text: "Bônus PRO DOWNLOADS", included: true },
+			{ text: "IP dedicado", included: false, highlight: true },
+			{ text: "Recursos dedicados", included: false, highlight: true },
+			{ text: "Suporte prioritário", included: true, highlight: true },
 		],
 		recommended: true,
 	},
 	{
-		id: "enterprise",
-		name: "Enterprise",
-		price: "79,90",
-		annualPrice: "63,90",
-		storage: "50 GB SSD NVMe",
+		id: "executivo",
+		name: "Executivo",
+		price: "69,99",
+		annualPrice: "41,99",
+		storage: "100 GB NVMe",
 		bandwidth: "Ilimitado",
-		domains: "Ilimitados",
-		databases: "Ilimitados MySQL",
+		domains: "Tenha sites ilimitados",
+		databases: "Bancos de dados Ilimitados",
 		features: [
-			{ text: "cPanel Completo", included: true },
+			{ text: "1 Licença cPanel", included: true },
 			{ text: "Certificado SSL Grátis", included: true },
-			{ text: "Contas de Email Ilimitadas", included: true, highlight: true },
+			{ text: "Email @seudominio.com.br", included: true },
 			{
-				text: "Backup Diário",
+				text: "Backup grátis todos os dias",
 				included: true,
-				tooltip: "Backups automáticos com retenção de 30 dias",
+				tooltip: "Backups automáticos com retenção de 7 dias",
 			},
-			{ text: "Construtor de Sites", included: true },
-			{ text: "Proteção Cloudflare Premium", included: true, highlight: true },
-			{ text: "LiteSpeed Web Server", included: true },
-			{ text: "PHP 8.2", included: true },
-			{ text: "Instalador de aplicativos", included: true },
-			{ text: "Migração gratuita", included: true },
-			{ text: "Cache avançado", included: true },
-			{ text: "CDN integrada", included: true },
+			{ text: "Certificado de segurança SSL", included: true },
+			{ text: "Proteção Cloudflare", included: true },
+			{ text: "LiteSpeed Web Server", included: true, highlight: false },
+			{ text: "Seletor PHP 5.6 a 8.4", included: true },
+			{ text: "Migração de site grátis", included: true },
+			{ text: "PHP + NodeJS + Ruby + Python", included: true },
+		    { text: "Cache avançado", included: true },
+			{ text: "Bônus PRO DOWNLOADS", included: true },
 			{ text: "IP dedicado", included: true, highlight: true },
 			{ text: "Recursos dedicados", included: true, highlight: true },
-			{ text: "Suporte prioritário", included: true, highlight: true },
+			{ text: "Suporte prioritário", included: true, highlight: false },
 		],
 	},
 ];
@@ -233,11 +241,10 @@ export function HostingPlans() {
 			<div className="container px-4 mx-auto max-w-7xl">
 				<div className="flex flex-col items-center mb-16">
 					<h2 className="text-4xl font-bold tracking-tight text-white mb-4">
-						Hospedagem Web
+						Hospedagem de Site
 					</h2>
 					<p className="text-gray-400 text-lg max-w-2xl text-center">
-						Infraestrutura de alta performance com tecnologia de ponta para seu
-						site
+						Obtenha mais com a Hospedagem de Site da Linkor
 					</p>
 				</div>
 
@@ -254,13 +261,13 @@ export function HostingPlans() {
 										value="cpanel"
 										className="data-[state=active]:bg-[#1A1A35] data-[state=active]:text-white text-gray-400 h-10 px-6"
 									>
-										cPanel
+										Corporativo
 									</TabsTrigger>
 									<TabsTrigger
 										value="plesk"
 										className="data-[state=active]:bg-[#1A1A35] data-[state=active]:text-white text-gray-400 h-10 px-6"
 									>
-										Plesk
+										Gamer
 									</TabsTrigger>
 								</TabsList>
 
@@ -272,9 +279,9 @@ export function HostingPlans() {
 										className="data-[state=checked]:bg-[#F04339]"
 									/>
 									<span className="text-gray-400 text-sm flex items-center gap-2">
-										Anual
+										Trienal
 										<span className="bg-[#F04339]/10 text-[#F04339] text-xs px-2 py-0.5 rounded-full">
-											-20%
+											-40%
 										</span>
 									</span>
 								</div>
