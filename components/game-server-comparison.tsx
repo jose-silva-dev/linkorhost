@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Globe, Network, Gauge, Shield, Server } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 export function GameServerComparison() {
 	const [isVisible, setIsVisible] = useState(false);
@@ -168,7 +169,7 @@ export function GameServerComparison() {
 
 							<div className="mt-6">
 								<Link
-									href="#planos-servidor-jogos"
+									href={siteConfig.gameServer.link}
 									className="w-full inline-flex items-center justify-center bg-gradient-to-r from-[#F04339] to-[#FF6B5B] text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-all"
 								>
 									Ver Planos de Servidor
@@ -313,7 +314,7 @@ export function GameServerComparison() {
 
 				<div className="mt-12 text-center">
 					<Link
-						href="#planos-servidor-jogos"
+						href={siteConfig.gameServer.link}
 						className="inline-flex items-center justify-center bg-gradient-to-r from-[#F04339] to-[#FF6B5B] text-white font-medium py-3 px-8 rounded-lg hover:opacity-90 transition-all"
 					>
 						Escolha seu Plano de Servidor de Jogos

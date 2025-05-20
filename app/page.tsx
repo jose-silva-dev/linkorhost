@@ -32,205 +32,7 @@ import { PremiumContentAccess } from "@/components/premium-content-access";
 import { GameServerComparison } from "@/components/game-server-comparison";
 import { siteConfig } from "@/config/site";
 
-// Dados dos depoimentos
-const testimonials = [
-	{
-		id: 1,
-		name: "Miguel Oliveira",
-		role: "CEO",
-		company: "TechSolutions",
-		image: "/professional-headshot.png",
-		rating: 5,
-		text: "Desde que migramos para a Linkor, os tempos de carregamento do nosso site diminuíram em 70%. A infraestrutura deles é sólida e a equipe de suporte é incrivelmente responsiva. Melhor decisão que tomamos para nosso e-commerce em crescimento.",
-	},
-	{
-		id: 2,
-		name: "Fernanda Lima",
-		role: "CTO",
-		company: "WebDev Brasil",
-		image:
-			"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FRAME-HOSPEDAGEMDESITES-zh2E6tATHuF7TpcnhHWfJBeTV1ntJq.png",
-		rating: 5,
-		text: "Nossa experiência com a Linkor tem sido fantástica. Desde a hospedagem até as soluções empresariais, cada aspecto foi tratado com dedicação. Nosso site em WordPress nunca funcionou tão bem.",
-	},
-	{
-		id: 3,
-		name: "Carlos Santos",
-		role: "Fundador",
-		company: "AppStart",
-		image: "/professional-man-headshot.png",
-		rating: 5,
-		text: "À medida que nossa startup cresceu de 10.000 para 1 milhão de usuários, a Linkor cresceu conosco sem esforço. Sua infraestrutura de escalonamento automático lidou com picos de tráfego perfeitamente.",
-	},
-	{
-		id: 4,
-		name: "Ana Beatriz",
-		role: "Diretora de Marketing",
-		company: "E-commerce Express",
-		image: "/professional-woman-headshot.png",
-		rating: 5,
-		text: "A velocidade de carregamento do nosso site melhorou drasticamente após migrarmos para a Linkor. Nossas taxas de conversão aumentaram 35% apenas por causa da melhoria no desempenho. O suporte técnico é excepcional.",
-	},
-	{
-		id: 5,
-		name: "Roberto Mendes",
-		role: "Desenvolvedor Full Stack",
-		company: "DevHouse",
-		image: "/professional-man-headshot.png",
-		rating: 4,
-		text: "Como desenvolvedor, aprecio muito as ferramentas que a Linkor oferece. O ambiente de staging, os pipelines de CI/CD e a facilidade de implantação tornaram meu fluxo de trabalho muito mais eficiente.",
-	},
-	{
-		id: 6,
-		name: "Juliana Costa",
-		role: "Gerente de Projetos",
-		company: "Agência Digital",
-		image: "/professional-woman-headshot.png",
-		rating: 5,
-		text: "Gerenciar múltiplos projetos web se tornou muito mais fácil com a Linkor. O painel de controle intuitivo e as ferramentas de monitoramento nos ajudam a manter tudo funcionando perfeitamente.",
-	},
-	{
-		id: 7,
-		name: "Marcelo Alves",
-		role: "Proprietário",
-		company: "Loja Virtual MegaShop",
-		image: "/professional-headshot.png",
-		rating: 5,
-		text: "Minha loja virtual nunca esteve tão estável. Mesmo durante a Black Friday, com tráfego 10x maior que o normal, o site permaneceu rápido e responsivo. A proteção DDoS da Linkor realmente funciona!",
-	},
-	{
-		id: 8,
-		name: "Camila Ferreira",
-		role: "Arquiteta de Software",
-		company: "TechInnovate",
-		image: "/professional-woman-headshot.png",
-		rating: 4,
-		text: "A flexibilidade da infraestrutura da Linkor nos permitiu escalar conforme necessário. Começamos com um plano básico e crescemos gradualmente sem nenhum tempo de inatividade durante as migrações.",
-	},
-	{
-		id: 9,
-		name: "Paulo Henrique",
-		role: "Diretor de TI",
-		company: "Grupo Empresarial",
-		image: "/professional-man-headshot.png",
-		rating: 5,
-		text: "Após avaliar vários provedores de hospedagem, escolhemos a Linkor pela combinação de desempenho, segurança e custo-benefício. Três anos depois, continuamos extremamente satisfeitos com nossa decisão.",
-	},
-];
-
-// Dados dos processadores e planos
-const processorsData = {
-	intel: {
-		id: "intel",
-		name: "Intel(R) Xeon(R) Platinum",
-		description: "Desempenho empresarial",
-		icon: <Server className="h-8 w-8 text-blue-600" />,
-		iconBg: "bg-blue-100",
-		color: "text-blue-600",
-		plans: [
-			{
-				id: "intel-basic",
-				name: "Plano Básico",
-				specs: "4 vCPU • 8GB RAM • 120GB SSD NVMe",
-				price: "89,90",
-				link: "#intel-basic",
-				popular: false,
-			},
-			{
-				id: "intel-advanced",
-				name: "Plano Avançado",
-				specs: "8 vCPU • 16GB RAM • 240GB SSD NVMe",
-				price: "159,90",
-				link: "#intel-advanced",
-				popular: true,
-			},
-			{
-				id: "intel-enterprise",
-				name: "Plano Enterprise",
-				specs: "16 vCPU • 32GB RAM • 480GB SSD NVMe",
-				price: "299,90",
-				link: "#intel-enterprise",
-				popular: false,
-			},
-		],
-	},
-	ryzen7900: {
-		id: "ryzen7900",
-		name: "AMD Ryzen™ 9 7900X",
-		description: "Última geração",
-		icon: <Cpu className="h-8 w-8 text-[#F04339]" />,
-		iconBg: "bg-red-100",
-		color: "text-[#F04339]",
-		plans: [
-			{
-				id: "ryzen7900-basic",
-				name: "Plano Básico",
-				specs: "2 vCPU • 4GB RAM • 80GB SSD NVMe",
-				price: "69,90",
-				link: "#ryzen7900-basic",
-				popular: false,
-			},
-			{
-				id: "ryzen7900-advanced",
-				name: "Plano Avançado",
-				specs: "4 vCPU • 8GB RAM • 160GB SSD NVMe",
-				price: "129,90",
-				link: "#ryzen7900-advanced",
-				popular: false,
-			},
-			{
-				id: "ryzen7900-enterprise",
-				name: "Plano Empresarial",
-				specs: "8 vCPU • 16GB RAM • 320GB SSD NVMe",
-				price: "249,90",
-				link: "#ryzen7900-enterprise",
-				popular: true,
-			},
-		],
-	},
-	ryzen5900: {
-		id: "ryzen5900",
-		name: "AMD Ryzen™ 9 5900X",
-		description: "Excelente custo-benefício",
-		icon: <Cpu className="h-8 w-8 text-[#F04339]" />,
-		iconBg: "bg-red-100",
-		color: "text-[#F04339]",
-		plans: [
-			{
-				id: "ryzen5900-basic",
-				name: "Plano Econômico",
-				specs: "2 vCPU • 4GB RAM • 60GB SSD NVMe",
-				price: "49,90",
-				link: "#ryzen5900-basic",
-				popular: false,
-			},
-			{
-				id: "ryzen5900-advanced",
-				name: "Plano Plus",
-				specs: "4 vCPU • 8GB RAM • 120GB SSD NVMe",
-				price: "99,90",
-				link: "#ryzen5900-advanced",
-				popular: true,
-			},
-			{
-				id: "ryzen5900-enterprise",
-				name: "Plano Pro",
-				specs: "6 vCPU • 12GB RAM • 240GB SSD NVMe",
-				price: "179,90",
-				link: "#ryzen5900-enterprise",
-				popular: false,
-			},
-		],
-	},
-};
-
 export default function Home() {
-	const [selectedProcessor, setSelectedProcessor] =
-		useState<string>("ryzen7900");
-
-	const processor =
-		processorsData[selectedProcessor as keyof typeof processorsData];
-
 	return (
 		<div className="flex flex-col mx-auto justify-center items-center">
 			{/* Hero Section */}
@@ -324,208 +126,6 @@ export default function Home() {
 
 			{/* Premium Content Access  */}
 			<PremiumContentAccess />
-
-			<section className="py-16 bg-[#0C0C17] relative overflow-hidden w-full hidden">
-				<div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-b from-black/50 to-transparent" />
-
-				<div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-t from-black/50 to-transparent" />
-
-				<div className="container px-4 md:px-6 relative z-10 mx-auto">
-					<div className="text-center mb-12">
-						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-							Planos Flexíveis para Cada Negócio
-						</h2>
-						<p className="mt-4 text-g md:text-xl max-w-3xl mx-auto">
-							Escolha o plano perfeito para suas necessidades. Todos os planos
-							incluem nossa infraestrutura principal sem taxas ocultas.
-						</p>
-					</div>
-
-					<section className="container mx-auto px-6 flex-grow">
-						<section className="pt-[5%] flex flex-col">
-							<div className="flex flex-col xl:flex-row items-start gap-16">
-								{/* Seleção de Processadores */}
-								<div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 mt-8 w-full xl:w-auto">
-									{Object.values(processorsData).map((proc) => (
-										<motion.div
-											key={proc.id}
-											className={`flex flex-col duration-200 hover:bg-gray-950/70 cursor-pointer items-center justify-center bg-gray-950 border-2 rounded-lg p-6 transition-all ${
-												selectedProcessor === proc.id
-													? `border-gray-800 shadow-lg`
-													: "border-gray-800"
-											}`}
-											onClick={() => setSelectedProcessor(proc.id)}
-											whileHover={{ scale: 1.02 }}
-											whileTap={{ scale: 0.98 }}
-										>
-											<div
-												className={`h-16 w-16 ${proc.iconBg} rounded-full flex items-center justify-center mb-4`}
-											>
-												{proc.icon}
-											</div>
-											<p
-												className={`text-center font-bold ${selectedProcessor === proc.id ? proc.color : "text-gray-400"}`}
-											>
-												{proc.name}
-											</p>
-											<p className="text-center text-sm text-gray-500 mt-2">
-												{proc.description}
-											</p>
-											{selectedProcessor === proc.id && (
-												<div
-													className={`mt-4 px-3 py-1 rounded-full text-xs font-medium ${
-														proc.id === "intel"
-															? "bg-blue-100 text-blue-600"
-															: "bg-red-100 text-[#F04339]"
-													}`}
-												>
-													Selecionado
-												</div>
-											)}
-										</motion.div>
-									))}
-								</div>
-
-								{/* Planos para o processador selecionado */}
-								<div className="w-full mt-8 xl:mt-0">
-									<div className="flex items-center justify-between mb-6">
-										<div className="flex items-center">
-											<div
-												className={`h-12 w-12 ${processor.iconBg} rounded-full flex items-center justify-center`}
-											>
-												{processor.icon}
-											</div>
-											<div className="ml-4">
-												<p className={`text-xl font-bold ${processor.color}`}>
-													{processor.name}
-												</p>
-												<p className="text-sm text-gray-400">
-													{processor.description}
-												</p>
-											</div>
-										</div>
-										<div>
-											<Link
-												href="#"
-												className={`text-sm font-medium text-center ${processor.color} flex items-center hover:underline`}
-											>
-												Ver todos os planos
-												<ChevronRight className="h-4 w-4 ml-1" />
-											</Link>
-										</div>
-									</div>
-
-									<div className="grid gap-6">
-										{processor.plans.map((plan) => (
-											<Link key={plan.id} href={plan.link} className="block">
-												<motion.div
-													className={`border-2 z-0 ${
-														plan.popular
-															? `border-${processor.id === "intel" ? "blue-500" : "[#F04339]"}`
-															: "border-gray-800"
-													} bg-gray-950 p-6 rounded-lg flex items-center justify-between hover:shadow-md transition-all relative`}
-													whileHover={{ scale: 1.01, y: -5 }}
-													whileTap={{ scale: 0.99 }}
-												>
-													{plan.popular && (
-														<div
-															className={`absolute -top-3 right-4 z-10 ${
-																processor.id === "intel"
-																	? "bg-gradient-to-r from-blue-500 to-blue-600"
-																	: "bg-gradient-to-r from-[#F04339] to-[#FF6B5B]"
-															} text-white text-xs font-bold px-3 py-1 rounded-full`}
-														>
-															POPULAR
-														</div>
-													)}
-													<div className="flex items-center">
-														<div
-															className={`h-12 w-12 ${processor.iconBg} rounded-full flex items-center justify-center`}
-														>
-															<Server
-																className={`h-6 w-6 ${processor.id === "intel" ? "text-blue-600" : "text-[#F04339]"}`}
-															/>
-														</div>
-														<div className="ml-4">
-															<h3 className="font-bold text-gray-200">
-																{plan.name}
-															</h3>
-															<p className="text-sm text-gray-400 mt-1">
-																{plan.specs}
-															</p>
-														</div>
-													</div>
-													<div className="text-right">
-														<h3 className="font-bold text-gray-200">
-															<span
-																className={
-																	processor.id === "intel"
-																		? "text-blue-600"
-																		: "text-[#F04339]"
-																}
-															>
-																R${" "}
-															</span>
-															{plan.price}
-														</h3>
-														<p className="text-sm text-gray-400">Por mês</p>
-													</div>
-												</motion.div>
-											</Link>
-										))}
-									</div>
-								</div>
-							</div>
-						</section>
-
-						<section className="pt-[5%]">
-							<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-								<Card className="bg-gray-950 rounded-sm shadow-sm border border-gray-800 hover:shadow-md transition-all">
-									<div className="p-4">
-										<div className="flex gap-2">
-											<Zap size={18} className="mt-1 text-[#F04339]" />
-											<h3 className="font-bold text-gray-200">Segurança</h3>
-										</div>
-										<p className="text-gray-400 text-[14px] pt-1">
-											Proteção com Cloudflare, firewall premium e DNS de alta
-											performance para conexões seguras e rápidas.
-										</p>
-									</div>
-								</Card>
-								<Card className="bg-gray-950 rounded-sm shadow-sm border border-gray-800 hover:shadow-md transition-all">
-									<div className="p-4">
-										<div className="flex gap-2">
-											<Clock size={18} className="mt-1 text-[#F04339]" />
-											<h3 className="font-bold text-gray-200">Uptime 99,9%</h3>
-										</div>
-										<p className="text-gray-400 text-[14px] pt-1">
-											Garantimos 99,9% de uptime, mantendo seus sites e
-											aplicações sempre online e sem interrupções.
-										</p>
-									</div>
-								</Card>
-								<Card className="bg-gray-950 rounded-sm shadow-sm border border-gray-800 hover:shadow-md transition-all">
-									<div className="p-4">
-										<div className="flex gap-2">
-											<HeadphonesIcon
-												size={18}
-												className="mt-1 text-[#F04339]"
-											/>
-											<h3 className="font-bold text-gray-200">
-												Suporte rápido
-											</h3>
-										</div>
-										<p className="text-gray-400 text-[14px] pt-1">
-											Suporte ágil e eficiente, pronto para ajudar você a
-											qualquer hora, com atendimento rápido e amigável.
-										</p>
-									</div>
-								</Card>
-							</div>
-						</section>
-					</section>
-				</div>
-			</section>
 
 			{/* Premium Tools Section */}
 			<section className="py-16 bg-[#0C0C17] relative overflow-hidden w-full">
@@ -702,7 +302,7 @@ export default function Home() {
 			{/* Testimonials Section - Carrossel */}
 			<section className="py-16 bg-gray-950 relative overflow-hidden w-full">
 				<div className="container px-4 md:px-6 relative z-10 mx-auto">
-					<TestimonialCarousel testimonials={testimonials} />
+					<TestimonialCarousel testimonials={siteConfig.testimonials} />
 				</div>
 			</section>
 
@@ -711,7 +311,7 @@ export default function Home() {
 
 			{/* Promos Grid */}
 			<section
-				className={`py-16 bg-gray-950 relative overflow-hidden w-full ${siteConfig.promoCard ? "block" : "hidden"}`}
+				className={`py-16 bg-gray-950 relative overflow-hidden w-full ${siteConfig.promoCard.active ? "block" : "hidden"}`}
 			>
 				<div className="container px-4 md:px-6 relative z-10 mx-auto">
 					<div className="text-center mb-12">
@@ -726,39 +326,18 @@ export default function Home() {
 
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 						<div />
-						<PromoCard
-							image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DV%20WHATSAPP-JfqpYpH7Ye56LN6S0ldMWFHv0Ztgua.png"
-							title="AMD Ryzen™ 9 7900X"
-							subtitle="4.7GHz - Até 5.6 GHz"
-							features={[
-								"2vCPU Ryzen 9",
-								"2GB RAM DDR5",
-								"40GB NVME",
-								"1 IPv4 (/32)",
-								"1 IPv6 (/128)",
-								"Windows 2012 Até 2025!",
-							]}
-							price="50,00"
-							originalPrice="99,00"
-							ctaText="Contratar Agora"
-						/>
-
-						<PromoCard
-							image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/natal-linkor-500x500-ovjTWyNV5J1tUBBmy6Gz4K8ofaprLI.png"
-							title="cPanel ECO-5"
-							subtitle="Perfeito para iniciantes"
-							features={[
-								"Hospedagem para um domínio",
-								"5 GB de armazenamento NVMe",
-								"1 Conta de e-mail grátis",
-								"Tráfego Ilimitado",
-								"Litespeed Webserver + QUIC.cloud",
-								"Backup semanal",
-							]}
-							price="6,99"
-							ctaText="Aproveitar Oferta"
-							isChristmas={true}
-						/>
+						{siteConfig.promoCard.items.map((item, index) => (
+							<PromoCard
+								key={index}
+								title={item.title}
+								subtitle={item.subtitle}
+								price={item.price}
+								image={item.image}
+								features={item.features}
+								ctaText={item.ctaText}
+								isChristmas={item.isChristmas}
+							/>
+						))}
 					</div>
 				</div>
 			</section>

@@ -24,200 +24,8 @@ import {
 	MinusIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-interface PlanFeature {
-	text: string;
-	included: boolean;
-	tooltip?: string;
-	highlight?: boolean;
-}
-
-interface HostingPlan {
-	id: string;
-	name: string;
-	price: string;
-	annualPrice?: string;
-	storage: string;
-	bandwidth: string;
-	domains: string;
-	databases: string;
-	features: PlanFeature[];
-	recommended?: boolean;
-}
-
-const cpanelPlans = [
-	{
-		id: "essencial",
-		name: "Essencial",
-		price: "29,99",
-		annualPrice: "17,99",
-		storage: "10 GB SSD",
-		bandwidth: "Ilimitado",
-		domains: "Tenha sites ilimitados",
-		databases: "Bancos de dados Ilimitados",
-		features: [
-			{ text: "1 Licença cPanel", included: true },
-			{ text: "Certificado SSL Grátis", included: true },
-			{ text: "Email @seudominio.com.br", included: true },
-			{
-				text: "Backup grátis todos os dias",
-				included: true,
-				tooltip: "Backups automáticos com retenção de 7 dias",
-			},
-			{ text: "Certificado de segurança SSL", included: true },
-			{ text: "Proteção Cloudflare", included: true },
-			{ text: "LiteSpeed Web Server", included: true, highlight: false },
-			{ text: "Seletor PHP 5.6 a 8.4", included: true },
-			{ text: "Migração de site grátis", included: true },
-			{ text: "PHP + NodeJS + Ruby + Python", included: true },
-		    { text: "Cache avançado", included: true },
-			{ text: "Bônus PRO DOWNLOADS", included: true },
-			{ text: "IP dedicado", included: false, highlight: true },
-			{ text: "Recursos dedicados", included: false, highlight: true },
-			{ text: "Suporte prioritário", included: false, highlight: true },
-		],
-	},
-	{
-		id: "expansao",
-		name: "Expansão",
-		price: "39,99",
-		annualPrice: "23,99",
-		storage: "50 GB NVMe",
-		bandwidth: "Ilimitado",
-		domains: "Tenha sites ilimitados",
-		databases: "Bancos de dados Ilimitados",
-		features: [
-			{ text: "1 Licença cPanel", included: true },
-			{ text: "Certificado SSL Grátis", included: true },
-			{ text: "Email @seudominio.com.br", included: true },
-			{
-				text: "Backup grátis todos os dias",
-				included: true,
-				tooltip: "Backups automáticos com retenção de 7 dias",
-			},
-			{ text: "Certificado de segurança SSL", included: true },
-			{ text: "Proteção Cloudflare", included: true },
-			{ text: "LiteSpeed Web Server", included: true, highlight: false },
-			{ text: "Seletor PHP 5.6 a 8.4", included: true },
-			{ text: "Migração de site grátis", included: true },
-			{ text: "PHP + NodeJS + Ruby + Python", included: true },
-		    { text: "Cache avançado", included: true },
-			{ text: "Bônus PRO DOWNLOADS", included: true },
-			{ text: "IP dedicado", included: false, highlight: true },
-			{ text: "Recursos dedicados", included: false, highlight: true },
-			{ text: "Suporte prioritário", included: true, highlight: true },
-		],
-		recommended: true,
-	},
-	{
-		id: "executivo",
-		name: "Executivo",
-		price: "69,99",
-		annualPrice: "41,99",
-		storage: "100 GB NVMe",
-		bandwidth: "Ilimitado",
-		domains: "Tenha sites ilimitados",
-		databases: "Bancos de dados Ilimitados",
-		features: [
-			{ text: "1 Licença cPanel", included: true },
-			{ text: "Certificado SSL Grátis", included: true },
-			{ text: "Email @seudominio.com.br", included: true },
-			{
-				text: "Backup grátis todos os dias",
-				included: true,
-				tooltip: "Backups automáticos com retenção de 7 dias",
-			},
-			{ text: "Certificado de segurança SSL", included: true },
-			{ text: "Proteção Cloudflare", included: true },
-			{ text: "LiteSpeed Web Server", included: true, highlight: false },
-			{ text: "Seletor PHP 5.6 a 8.4", included: true },
-			{ text: "Migração de site grátis", included: true },
-			{ text: "PHP + NodeJS + Ruby + Python", included: true },
-		    { text: "Cache avançado", included: true },
-			{ text: "Bônus PRO DOWNLOADS", included: true },
-			{ text: "IP dedicado", included: true, highlight: true },
-			{ text: "Recursos dedicados", included: true, highlight: true },
-			{ text: "Suporte prioritário", included: true, highlight: false },
-		],
-	},
-];
-
-const pleskPlans = [
-	{
-		id: "basic",
-		name: "Basic",
-		price: "24,90",
-		annualPrice: "19,90",
-		storage: "15 GB SSD NVMe",
-		bandwidth: "Ilimitado",
-		domains: "2 domínios",
-		databases: "10 MySQL",
-		features: [
-			{ text: "Plesk Obsidian", included: true },
-			{ text: "Certificado SSL Grátis", included: true },
-			{ text: "10 Contas de Email", included: true },
-			{ text: "Backup Semanal", included: true },
-			{ text: "WordPress Toolkit", included: false },
-			{ text: "Proteção Imunify360", included: false },
-			{ text: "Git integrado", included: true, highlight: true },
-			{ text: "Docker suporte", included: false },
-			{ text: "Node.js, Python, PHP", included: true },
-			{ text: "Migração gratuita", included: true },
-		],
-	},
-	{
-		id: "professional",
-		name: "Professional",
-		price: "49,90",
-		annualPrice: "39,90",
-		storage: "30 GB SSD NVMe",
-		bandwidth: "Ilimitado",
-		domains: "10 domínios",
-		databases: "30 MySQL",
-		features: [
-			{ text: "Plesk Obsidian", included: true },
-			{ text: "Certificado SSL Grátis", included: true },
-			{ text: "30 Contas de Email", included: true },
-			{ text: "Backup Diário", included: true },
-			{ text: "WordPress Toolkit", included: true, highlight: true },
-			{ text: "Proteção Imunify360", included: true, highlight: true },
-			{ text: "Git integrado", included: true },
-			{ text: "Docker suporte", included: true, highlight: true },
-			{ text: "Node.js, Python, PHP", included: true },
-			{ text: "Migração gratuita", included: true },
-			{ text: "CI/CD pipeline", included: true, highlight: true },
-			{ text: "Staging environments", included: true },
-		],
-		recommended: true,
-	},
-	{
-		id: "ultimate",
-		name: "Ultimate",
-		price: "89,90",
-		annualPrice: "71,90",
-		storage: "75 GB SSD NVMe",
-		bandwidth: "Ilimitado",
-		domains: "Ilimitados",
-		databases: "Ilimitados MySQL",
-		features: [
-			{ text: "Plesk Obsidian", included: true },
-			{ text: "Certificado SSL Grátis", included: true },
-			{ text: "Contas de Email Ilimitadas", included: true, highlight: true },
-			{ text: "Backup Diário", included: true },
-			{ text: "WordPress Toolkit Deluxe", included: true, highlight: true },
-			{ text: "Proteção Imunify360 Premium", included: true, highlight: true },
-			{ text: "Git integrado", included: true },
-			{ text: "Docker suporte", included: true },
-			{ text: "Node.js, Python, PHP", included: true },
-			{ text: "Migração gratuita", included: true },
-			{ text: "CI/CD pipeline", included: true },
-			{ text: "Staging environments", included: true },
-			{ text: "IP dedicado", included: true, highlight: true },
-			{ text: "Recursos dedicados", included: true, highlight: true },
-			{ text: "Suporte prioritário", included: true, highlight: true },
-		],
-	},
-];
+import { siteConfig } from "@/config/site";
+import Link from "next/link";
 
 export function HostingPlans() {
 	const [activeTab, setActiveTab] = useState("cpanel");
@@ -225,9 +33,6 @@ export function HostingPlans() {
 	const [expandedFeatures, setExpandedFeatures] = useState<
 		Record<string, boolean>
 	>({});
-	const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-
-	const plans = activeTab === "cpanel" ? cpanelPlans : pleskPlans;
 
 	const toggleFeatures = (planId: string) => {
 		setExpandedFeatures((prev) => ({
@@ -289,19 +94,13 @@ export function HostingPlans() {
 
 							<TabsContent value="cpanel" className="mt-0">
 								<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-									{cpanelPlans.map((plan) => (
+									{siteConfig.cpanelPlans.map((plan) => (
 										<PlanCard
 											key={plan.id}
 											plan={plan}
 											isAnnual={isAnnual}
 											isExpanded={!!expandedFeatures[plan.id]}
 											toggleFeatures={() => toggleFeatures(plan.id)}
-											isSelected={selectedPlan === plan.id}
-											onSelect={() =>
-												setSelectedPlan(
-													plan.id === selectedPlan ? null : plan.id,
-												)
-											}
 										/>
 									))}
 								</div>
@@ -309,19 +108,13 @@ export function HostingPlans() {
 
 							<TabsContent value="plesk" className="mt-0">
 								<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-									{pleskPlans.map((plan) => (
+									{siteConfig.pleskPlans.map((plan) => (
 										<PlanCard
 											key={plan.id}
 											plan={plan}
 											isAnnual={isAnnual}
 											isExpanded={!!expandedFeatures[plan.id]}
 											toggleFeatures={() => toggleFeatures(plan.id)}
-											isSelected={selectedPlan === plan.id}
-											onSelect={() =>
-												setSelectedPlan(
-													plan.id === selectedPlan ? null : plan.id,
-												)
-											}
 										/>
 									))}
 								</div>
@@ -339,29 +132,18 @@ function PlanCard({
 	isAnnual,
 	isExpanded,
 	toggleFeatures,
-	isSelected,
-	onSelect,
 }: {
-	plan: (typeof cpanelPlans)[0];
+	plan: (typeof siteConfig.cpanelPlans)[0];
 	isAnnual: boolean;
 	isExpanded: boolean;
 	toggleFeatures: () => void;
-	isSelected: boolean;
-	onSelect: () => void;
 }) {
 	const price = isAnnual ? plan.annualPrice || plan.price : plan.price;
 	const featuresLimit = 5;
 	const hasMoreFeatures = plan.features.length > featuresLimit;
 
 	return (
-		<div
-			className={cn(
-				"bg-gray-950 border rounded-lg transition-all duration-300 cursor-pointer",
-				isSelected
-					? "border-[#F04339] shadow-[0_0_20px_rgba(240,67,57,0.15)]"
-					: "border-[#1A1A35] hover:border-[#F04339]/50",
-			)}
-		>
+		<div className="bg-gray-950 border rounded-lg transition-all duration-300 cursor-pointer border-[#F04339] shadow-[0_0_20px_rgba(240,67,57,0.15)]">
 			<div className="p-6">
 				<div className="flex justify-between items-start mb-6">
 					<div>
@@ -460,25 +242,21 @@ function PlanCard({
 				</div>
 
 				<div className="flex flex-col gap-3">
-					<Button
-						onClick={onSelect}
-						className={cn(
-							"w-full py-5 rounded-md transition-colors",
-							isSelected
-								? "bg-[#F04339] hover:bg-[#F04339]/90 text-white"
-								: "bg-[#F04339] hover:bg-[#F04339] text-white",
-						)}
-					>
-						{isSelected ? "Selecionado" : "Selecionar"}
-					</Button>
+					<Link href={plan.link}>
+						<Button className="w-full py-5 rounded-md bg-[#F04339] hover:bg-[#F04339]/90 text-white">
+							Selecionar
+						</Button>
+					</Link>
 
-					<Button
-						variant="outline"
-						className="w-full py-5 rounded-md border-[#1A1A35] text-white bg-[#1A1A35] hover:text-white hover:bg-[#1A1A35]"
-					>
-						<span>Ver detalhes</span>
-						<ArrowRightIcon className="w-4 h-4 ml-2" />
-					</Button>
+					<Link href={plan.link}>
+						<Button
+							variant="outline"
+							className="w-full py-5 rounded-md border-[#1A1A35] text-white bg-[#1A1A35] hover:text-white hover:bg-[#1A1A35]"
+						>
+							<span>Ver detalhes</span>
+							<ArrowRightIcon className="w-4 h-4 ml-2" />
+						</Button>
+					</Link>
 				</div>
 			</div>
 		</div>
