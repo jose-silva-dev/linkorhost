@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://linkor.host
+
+# Sitemaps
+Sitemap: https://linkor.host/sitemap.xml
