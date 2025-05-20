@@ -19,9 +19,9 @@ export function FlexiblePlans() {
 			<div className="container px-4 md:px-6 mx-auto">
 				<div className="flex flex-col items-start max-w-5xl mx-auto">
 					<h2 className="text-4xl font-bold text-white mb-4 mx-auto">
-						Servidores Virtualizados &{" "}
+						Servidores VPS no{" "}
 						<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F04339] to-[#FF6B5B]">
-							Dedicados
+							Brasil
 						</span>
 					</h2>
 					<div className="w-full flex justify-center">

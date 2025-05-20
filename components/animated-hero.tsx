@@ -84,13 +84,13 @@ export default function AnimatedHero() {
 							variants={itemVariants}
 							className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl"
 						>
-							Acelere seu{" "}
+							Melhor plataforma{" "}
 							<motion.span
 								className="text-transparent bg-clip-text bg-gradient-to-r from-[#F04339] to-[#FF6B5B] inline-block"
 								animate={{ scale: [1, 1.03, 1] }}
 								transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
 							>
-								Crescimento Digital
+								Para seu Projeto
 							</motion.span>
 						</motion.h1>
 
@@ -98,8 +98,8 @@ export default function AnimatedHero() {
 							variants={itemVariants}
 							className="text-[#F2F2F3] md:text-xl max-w-lg"
 						>
-							Infraestrutura cloud poderosa projetada para empresas que exigem
-							confiabilidade, desempenho e escalabilidade.
+							Com a plataforma da Linkor, você gerencia seus servidores com facilidade.
+							Oferecemos VPS de alto desempenho para garantir a melhor experiência.
 						</motion.p>
 
 						<motion.ul variants={itemVariants} className="space-y-2">
@@ -146,7 +146,7 @@ export default function AnimatedHero() {
 									size="lg"
 									className="bg-gradient-to-r from-[#F04339] to-[#FF6B5B] hover:from-[#FF6B5B] hover:to-[#F04339] group"
 								>
-									Explorar Soluções
+									Aproveitar ofertas
 									<motion.div
 										animate={{ x: [0, 5, 0] }}
 										transition={{
@@ -186,9 +186,9 @@ export default function AnimatedHero() {
 									</motion.svg>
 								))}
 							</div>
-							<span className="text-sm font-medium">4.9</span>
+							<span className="text-sm font-medium">5.0</span>
 							<span className="text-sm text-[#F2F2F3]">
-								Provedor cloud mais bem avaliado em 2025
+								Atendimento mais bem avaliado em 2025
 							</span>
 						</motion.div>
 					</div>

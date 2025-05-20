@@ -724,7 +724,7 @@ export function AwardsRecognition() {
 								transition={{ duration: 0.5 }}
 								viewport={{ once: true }}
 							>
-								98%
+								99%
 							</motion.div>
 							<p className="text-gray-400 mt-2">Satisfação dos clientes</p>
 						</div>
@@ -760,7 +760,7 @@ export function AwardsRecognition() {
 								transition={{ duration: 0.5, delay: 0.3 }}
 								viewport={{ once: true }}
 							>
-								+50
+								+35
 							</motion.div>
 							<p className="text-gray-400 mt-2">Prêmios e reconhecimentos</p>
 						</div>

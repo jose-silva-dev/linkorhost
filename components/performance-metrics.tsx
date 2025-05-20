@@ -95,7 +95,7 @@ export function PerformanceMetrics() {
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-black/20 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10">
 					<Metric
 						title="Latência"
-						value="20"
+						value="15"
 						unit="/ms"
 						description="Experiência de jogo fluida e resposta rápida com latência mínima."
 						delay={0}
@@ -116,9 +116,9 @@ export function PerformanceMetrics() {
 					/>
 					<Metric
 						title="Proteção DDoS"
-						value="348"
+						value="388"
 						unit="Tbps"
-						description="Defesa integrada contra ataques, mantendo seus serviços seguros e estáveis."
+						description="Até 23x vezes maior que os maiores ataques DDoS já registrados"
 						delay={0.3}
 					/>
 				</div>

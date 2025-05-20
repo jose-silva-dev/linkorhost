@@ -15,23 +15,27 @@ export function Footer() {
 				height: 120,
 			},
 			description:
-				"Capacitando empresas com infraestrutura de nuvem de ponta e ferramentas para desenvolvedores. Ajudamos empresas de todos os tamanhos a construir, implantar e escalar aplicações com confiança.",
+				"Porque Deus amou o mundo de tal maneira, que deu o seu Filho unigênito, para que todo o que nele crê não pereça, mas tenha a vida eterna - (João 3:16)",
 		},
 		sections: [
 			{
 				title: "Hospedagem",
 				items: [
 					{
-						label: "cPanel",
-						href: "https://app.linkor.host/store/hospedagem-cpanel",
+						label: "Hospedagem de Site",
+						href: "https://app.linkor.host/store/hospedagem-de-site",
 					},
 					{
-						label: "Plesk",
-						href: "https://app.linkor.host/store/hospedagem-plesk",
+						label: "Hospedagem em Cloud",
+						href: "#",
 					},
 					{
-						label: "Cpanel Gamer",
-						href: "https://app.linkor.host/store/hospedagem-cpanel-gamer",
+						label: "Hospedagem Wordpress",
+						href: "#",
+					},
+					{
+						label: "Hospedagem de Site Gamer",
+						href: "https://app.linkor.host/store/hospedagem-de-site-gamer",
 					},
 				],
 			},
@@ -65,18 +69,18 @@ export function Footer() {
 				items: [
 					{
 						icon: <HeadphonesIcon className="h-5 w-5 text-[#F04339]" />,
-						label: "Suporte",
-						description: "0800 123 4567",
+						label: "Atendimento Geral",
+						description: "+55 11 5236-0123",
 					},
 					{
 						icon: <AiFillMessage className="h-5 w-5 text-[#F04339]" />,
-						label: "Chat ao Vivo",
-						description: "Disponível 24/7",
+						label: "Via Discord",
+						description: "discord/invite/#",
 					},
 					{
 						icon: <IoIosMail className="h-5 w-5 text-[#F04339]" />,
-						label: "Email",
-						description: "suporte@linkor.com.br",
+						label: "Via Email",
+						description: "suporte@linkor.host",
 					},
 				],
 			},
@@ -84,14 +88,14 @@ export function Footer() {
 		legal: {
 			cnpj: "59.818.181/0001-00",
 			devBy: {
-				label: "Desenvolvido por",
-				href: "https://loctor.dev",
-				brand: "Loctor",
+				// label: "Desenvolvido por",
+				// href: "https://loctor.dev",
+				// brand: "Loctor",
 			},
 			links: [
-				{ label: "Política de Privacidade", href: "https://loctor.dev" },
-				{ label: "Política de Reembolso", href: "https://loctor.dev" },
-				{ label: "Termos de Serviço", href: "https://loctor.dev" },
+				{ label: "Termos de Serviço", href: "" },
+				{ label: "Política de Privacidade", href: "" },
+				{ label: "Política de Reembolso", href: "" },
 			],
 		},
 	};

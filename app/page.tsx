@@ -97,21 +97,21 @@ export default function Home() {
 						<AnimatedFeature
 							icon={<Database className="h-6 w-6 text-[#F04339]" />}
 							title="Backups Automáticos"
-							description="Backups diários automatizados com retenção de 30 dias e funcionalidade de restauração com um clique. Nunca mais se preocupe com perda de dados."
+							description="Backups diários automatizados com retenção de 7 dias e funcionalidade de restauração com um clique. Nunca mais se preocupe com perda de dados."
 							delay={0.3}
 						/>
 
 						<AnimatedFeature
 							icon={<Zap className="h-6 w-6 text-[#F04339]" />}
 							title="Otimização de Performance"
-							description="Configurações de servidor otimizadas com armazenamento SSD, redes de entrega de conteúdo e cache avançado para carregamentos de página ultrarrápidos."
+							description="Configurações de servidor otimizadas com armazenamento SSD e NVMe, redes de entrega de conteúdo e cache avançado para carregamentos de página ultrarrápidos."
 							delay={0.4}
 						/>
 
 						<AnimatedFeature
 							icon={<Code className="h-6 w-6 text-[#F04339]" />}
 							title="Ferramentas para Desenvolvedores"
-							description="Suporte completo para stacks de desenvolvimento modernas, incluindo Node.js, Python, Ruby, PHP 8.2 e aplicações em contêineres com Docker e Kubernetes."
+							description="Suporte completo para stacks de desenvolvimento modernas, incluindo Node.js, Python, Ruby, PHP 5.6 ao 8.4 e aplicações em contêineres com Docker e Kubernetes."
 							delay={0.5}
 						/>
 					</div>
@@ -300,11 +300,11 @@ export default function Home() {
 			</section>
 
 			{/* Testimonials Section - Carrossel */}
-			<section className="py-16 bg-gray-950 relative overflow-hidden w-full">
+			{/* <section className="py-16 bg-gray-950 relative overflow-hidden w-full">
 				<div className="container px-4 md:px-6 relative z-10 mx-auto">
 					<TestimonialCarousel testimonials={siteConfig.testimonials} />
 				</div>
-			</section>
+			</section> */}
 
 			{/* Avaliações e Reconhecimentos */}
 			<AwardsRecognition />
