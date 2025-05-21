@@ -52,7 +52,7 @@ export const siteConfig = {
 			href: "/",
 		},
 	],
-	gameServer: { link: "#planos-servidor-jogos" },
+	gameServer: { link: "#planos-vps" },
 	cpanelPlans: [
 		{
 			id: "start",

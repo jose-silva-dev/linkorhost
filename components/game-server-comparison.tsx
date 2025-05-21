@@ -23,25 +23,25 @@ export function GameServerComparison() {
 			icon: <Globe className="h-6 w-6 text-[#F04339]" />,
 			title: "Otimização em Tempo Real",
 			description:
-				"Rotas de conexão otimizadas para servidores de jogos, eliminando problemas de conexão com um único clique.",
+				"Rotas inteligentes que se ajustam automaticamente para garantir a menor latência. Conecte-se aos seus jogos com um único clique e diga adeus aos travamentos e desconexões.",
 		},
 		{
 			icon: <Network className="h-6 w-6 text-[#F04339]" />,
 			title: "Traffic Shaper",
 			description:
-				"Moldamos e otimizamos seu tráfego de dados para fluir pelas rotas mais rápidas disponíveis.",
+				"Otimizamos o tráfego da sua conexão para priorizar dados de jogos e reduzir interferências. Garanta rotas mais rápidas, estáveis e com desempenho superior em qualquer partida.",
 		},
 		{
 			icon: <Shield className="h-6 w-6 text-[#F04339]" />,
 			title: "Multi-Internet",
 			description:
-				"Utilize múltiplas conexões para gameplay ininterrupto, alternando automaticamente para uma conexão funcional em caso de falha.",
+				"Conecte-se com múltiplas redes simultaneamente. Em caso de falha ou instabilidade em uma delas, a troca é feita automaticamente e sem interrupções.",
 		},
 		{
 			icon: <Gauge className="h-6 w-6 text-[#F04339]" />,
 			title: "FPS Boost",
 			description:
-				"Melhore sua experiência de jogo otimizando as configurações do sistema, aumentando frames e maximizando o desempenho.",
+				"Ajustamos e otimizamos o sistema operacional e os recursos do servidor para entregar o máximo de desempenho em jogos — mais frames por segundo, menor tempo de resposta.",
 		},
 	];
 
@@ -71,7 +71,7 @@ export function GameServerComparison() {
 							<div className="flex items-center">
 								<Server className="h-5 w-5 text-[#F04339] mr-2" />
 								<h3 className="font-bold text-white">
-									Servidor Hospedado na Linkor
+									Servidor Hospedado na Linkor 👍
 								</h3>
 							</div>
 							<div className="bg-[#F04339]/10 text-[#F04339] text-xs font-bold px-2 py-1 rounded-full">
@@ -94,12 +94,12 @@ export function GameServerComparison() {
 											<div className="mr-4">
 												<p className="text-xs text-gray-400">Ping Estimado</p>
 												<p className="text-2xl font-bold text-green-400">
-													12ms
+													15ms
 												</p>
 											</div>
 											<div>
 												<p className="text-xs text-gray-400">FPS</p>
-												<p className="text-2xl font-bold text-green-400">130</p>
+												<p className="text-2xl font-bold text-green-400">60</p>
 											</div>
 										</div>
 										<div className="bg-black/70 backdrop-blur-sm rounded-lg p-2">
@@ -125,7 +125,7 @@ export function GameServerComparison() {
 
 							<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
 								<div className="text-green-400 font-bold text-lg bg-black/50 px-4 py-2 rounded-lg backdrop-blur-sm">
-									ELIMINAÇÃO CONFIRMADA
+									VANTAGEM NO PVP
 								</div>
 							</div>
 						</div>
@@ -140,7 +140,7 @@ export function GameServerComparison() {
 										<div className="h-2 w-2 bg-green-500 rounded-full"></div>
 									</div>
 									<span className="text-gray-300">
-										Ping baixo e estável (5-20ms)
+										Ping baixo e estável (2-15ms)
 									</span>
 								</li>
 								<li className="flex items-start">
@@ -148,7 +148,7 @@ export function GameServerComparison() {
 										<div className="h-2 w-2 bg-green-500 rounded-full"></div>
 									</div>
 									<span className="text-gray-300">
-										Taxa de frames consistente (120+ FPS)
+										Taxa de frames consistente (60+ FPS)
 									</span>
 								</li>
 								<li className="flex items-start">
@@ -163,7 +163,7 @@ export function GameServerComparison() {
 									<div className="h-5 w-5 rounded-full bg-green-500/20 flex items-center justify-center mt-0.5 mr-3">
 										<div className="h-2 w-2 bg-green-500 rounded-full"></div>
 									</div>
-									<span className="text-gray-300">Proteção DDoS avançada</span>
+									<span className="text-gray-300">Proteção DDoS Gamer Inclusa</span>
 								</li>
 							</ul>
 
@@ -172,7 +172,7 @@ export function GameServerComparison() {
 									href={siteConfig.gameServer.link}
 									className="w-full inline-flex items-center justify-center bg-gradient-to-r from-[#F04339] to-[#FF6B5B] text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-all"
 								>
-									Ver Planos de Servidor
+									Ver Planos de Servidores
 								</Link>
 							</div>
 						</div>
@@ -189,11 +189,11 @@ export function GameServerComparison() {
 							<div className="flex items-center">
 								<Server className="h-5 w-5 text-gray-400 mr-2" />
 								<h3 className="font-bold text-white">
-									Servidor da Concorrência
+									Servidor da Concorrência ​​👎
 								</h3>
 							</div>
 							<div className="bg-gray-700/30 text-gray-400 text-xs font-bold px-2 py-1 rounded-full">
-								BÁSICO
+								NÃO RECOMENDADO
 							</div>
 						</div>
 
@@ -215,7 +215,7 @@ export function GameServerComparison() {
 											</div>
 											<div>
 												<p className="text-xs text-gray-400">FPS</p>
-												<p className="text-2xl font-bold text-red-400">68</p>
+												<p className="text-2xl font-bold text-red-400">35</p>
 											</div>
 										</div>
 										<div className="bg-black/70 backdrop-blur-sm rounded-lg p-2">
@@ -250,7 +250,7 @@ export function GameServerComparison() {
 										<div className="h-2 w-2 bg-red-500 rounded-full"></div>
 									</div>
 									<span className="text-gray-300">
-										Ping alto e instável (70-120ms)
+										Ping alto e instável (65-160ms)
 									</span>
 								</li>
 								<li className="flex items-start">
@@ -258,7 +258,7 @@ export function GameServerComparison() {
 										<div className="h-2 w-2 bg-red-500 rounded-full"></div>
 									</div>
 									<span className="text-gray-300">
-										Quedas frequentes de FPS (abaixo de 70)
+										Quedas frequentes de FPS (abaixo de 45)
 									</span>
 								</li>
 								<li className="flex items-start">

@@ -42,10 +42,10 @@ export default function Home() {
 			<section className="py-8 bg-[#0C0C17] flex overflow-hidden w-full mx-auto justify-center">
 				<div className="container px-4 md:px-6 relative z-10">
 					<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-						<StatsCounter value={10} suffix="K+" label="Clientes" />
-						<StatsCounter value={99.99} suffix="%" label="Uptime" />
-						<StatsCounter value={24} suffix="/7" label="Suporte" />
-						<StatsCounter value={50} suffix="+" label="Data Centers" />
+						<StatsCounter value={250} suffix="+" label="Clientes Ativos" />
+						<StatsCounter value={99.99} suffix="%" label="Tempo de Atividade" />
+						<StatsCounter value={24} suffix="/7" label="Suporte Humano" />
+						<StatsCounter value={5} suffix="+" label="Data Centers no Brasil" />
 					</div>
 				</div>
 			</section>

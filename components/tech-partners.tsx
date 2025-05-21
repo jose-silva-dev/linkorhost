@@ -34,7 +34,7 @@ export function TechPartners() {
 					className="text-center mb-12"
 				>
 					<h2 className="text-2xl md:text-3xl font-bold text-white">
-						Tecnologias de Ponta que Utilizamos
+						Fique com os grandes, faça parte da Linkor 🤝​
 					</h2>
 					<div className="w-20 h-1 bg-gradient-to-r from-[#F04339] to-[#FF6B5B] mx-auto mt-4"></div>
 				</motion.div>

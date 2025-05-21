@@ -31,7 +31,7 @@ export function AwardsRecognition() {
 						transition={{ duration: 0.5 }}
 						viewport={{ once: true }}
 					>
-						Avaliações e Reconhecimentos
+						Avaliações e Reconhecimentos 💖​
 					</motion.h2>
 					<motion.p
 						className="mt-4 text-gray-400 md:text-lg max-w-3xl mx-auto"

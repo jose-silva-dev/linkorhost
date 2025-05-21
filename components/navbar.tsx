@@ -280,8 +280,7 @@ export default function Navbar() {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						💸 Ganhe até <strong>R$ 950,00/mês</strong> promovendo nossos
-						serviços — Comece agora!
+						💸 Seu saldo é de <strong>R$ 1.250,00</strong> deseja resgatar? Já pensou em receber isto sem investir? — Saiba mais!
 					</a>
 
 					<button
@@ -298,11 +297,11 @@ export default function Navbar() {
 				<div className="container mx-auto flex justify-between items-center">
 					<div className="flex items-center space-x-6">
 						<Link
-							href="https://app.linkor.host/login"
+							href="https://app.linkor.host/clientarea.php?action=invoices"
 							className="text-sm text-gray-300 hover:text-white flex items-center transition-colors duration-200"
 						>
 							<FileText className="h-4 w-4 mr-1" />
-							2ª via da Fatura
+							Parcele seus pagamentos em até 12x
 						</Link>
 					</div>
 					<div className="flex items-center space-x-4">
@@ -320,7 +319,7 @@ export default function Navbar() {
 								<div className="absolute z-10 right-0 mt-2 w-48 bg-[#12122B] border border-[#1A1A35] rounded-md shadow-lg">
 									<div className="py-1">
 										<Link
-											href="https://app.linkor.host/contact.php"
+											href="https://app.linkor.host/knowledgebase"
 											className="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1A1A35] hover:text-white transition-colors duration-150"
 										>
 											<Mail className="h-4 w-4 inline mr-2" /> Central de Ajuda
@@ -353,20 +352,25 @@ export default function Navbar() {
 											href="https://app.linkor.host/login"
 											className="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1A1A35] hover:text-white transition-colors duration-150"
 										>
-											<User className="h-4 w-4 inline mr-2" /> Login
+											<User className="h-4 w-4 inline mr-2" /> Fazer login
 										</Link>
 										<Link
 											href="https://app.linkor.host/register.php"
 											className="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1A1A35] hover:text-white transition-colors duration-150"
 										>
-											<User className="h-4 w-4 inline mr-2" /> Registrar
+											<User className="h-4 w-4 inline mr-2" /> Criar nova conta
 										</Link>
 										<Link
-											href="https://app.linkor.host/index.php"
+											href="https://vps.manager.lat:4085/"
 											className="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1A1A35] hover:text-white transition-colors duration-150"
 										>
-											<Monitor className="h-4 w-4 inline mr-2" /> Painel do
-											Cliente
+											<Monitor className="h-4 w-4 inline mr-2" /> Painel de VPS
+										</Link>
+										<Link
+											href=""
+											className="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1A1A35] hover:text-white transition-colors duration-150"
+										>
+											<Monitor className="h-4 w-4 inline mr-2" /> Painel de Jogos
 										</Link>
 									</div>
 								</div>
@@ -466,12 +470,12 @@ export default function Navbar() {
 
 							{/* Discord */}
 							<a
-								href="https://discord.gg/linkor"
+								href="https://discord.gg/PeDhtAmv"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="px-3 py-2 rounded-md text-sm font-medium text-white bg-gradient-to-r from-[#F04339] to-[#FF6B5B] hover:from-[#FF6B5B] hover:to-[#F04339] flex items-center transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
 							>
-								Discord
+								Participe do Discord
 							</a>
 						</nav>
 					</div>
