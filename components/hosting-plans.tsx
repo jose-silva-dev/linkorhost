@@ -42,7 +42,7 @@ export function HostingPlans() {
 	};
 
 	return (
-		<section className="py-24 bg-[#0C0C17] w-full">
+		<section className="py-24 bg-[#0C0C17] w-full scroll-mt-24" id="plans-website">
 			<div className="container px-4 mx-auto max-w-7xl">
 				<div className="flex flex-col items-center mb-16">
 					<h2 className="text-4xl font-bold tracking-tight text-white mb-4">

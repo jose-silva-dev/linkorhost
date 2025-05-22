@@ -155,6 +155,19 @@ export function Footer() {
 					))}
 				</div>
 
+				<section className="w-full py-4 px-6 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-16 mt-12">
+				  <p className="text-gray-300 text-center md:text-left font-medium text-sm md:text-base">
+				    Aceitamos diversas formas de pagamento:
+				  </p>
+				  <div className="flex items-center flex-wrap justify-center gap-4">
+				    <Image width={36} height={36} src="/pix.png" alt="Pix" title="Pix" className="hover:scale-105 transition-transform" />
+				    <Image width={36} height={36} src="/mercadopago.webp" alt="Mercado Pago" title="Mercado Pago" className="hover:scale-105 transition-transform" />
+				    <Image width={36} height={36} src="/stripe.png" alt="Stripe" title="Stripe" className="hover:scale-105 transition-transform" />
+				    <Image width={36} height={36} src="/paypal.png" alt="PayPal" title="PayPal" className="hover:scale-105 transition-transform" />
+				    <Image width={36} height={36} src="/visa.png" alt="Cartões de Crédito e Débito" title="Cartões de Crédito e Débito" className="hover:scale-105 transition-transform" />
+				    <Image width={36} height={36} src="/mastercard.png" alt="Cartões de Crédito e Débito" title="Cartões de Crédito e Débito" className="hover:scale-105 transition-transform" />
+				  </div>
+				</section>
 				<div className="border-t border-gray-800 pt-8">
 					<div className="flex flex-col md:flex-row justify-between items-center gap-6">
 						<p className="text-sm text-gray-500">

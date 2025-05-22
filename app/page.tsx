@@ -31,6 +31,7 @@ import { FlexiblePlans } from "@/components/flexible-plans";
 import { PremiumContentAccess } from "@/components/premium-content-access";
 import { GameServerComparison } from "@/components/game-server-comparison";
 import { siteConfig } from "@/config/site";
+import Image from "next/image";
 
 export default function Home() {
 	return (
@@ -120,6 +121,17 @@ export default function Home() {
 
 			{/* Hosting Plans Section */}
 			<HostingPlans />
+			<section className="bg-[#0C0C17] w-full py-4 px-6 flex flex-col md:flex-row items-center justify-center gap-8 mx-auto">
+  				<p className="text-gray-300 text-center md:text-left font-medium text-sm md:text-base">
+  				  	Pagamento facilitado em até <span className="text-white font-semibold">12x no cartão</span>
+  				</p>
+  				<div className="items-center gap-4 grid grid-cols-4">
+  				  <Image width={48} height={48} src="./visa.png" alt="Visa" />
+  				  <Image width={48} height={48} src="./discover.webp" alt="Discover" />
+  				  <Image width={48} height={48} src="./americanexpress.png" alt="American Express" />
+  				  <Image width={48} height={48} src="./mastercard.png" alt="MasterCard" />
+  				</div>
+			</section>
 
 			{/* Pricing Section */}
 			<FlexiblePlans />

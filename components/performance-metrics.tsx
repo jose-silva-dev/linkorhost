@@ -122,17 +122,6 @@ export function PerformanceMetrics() {
 						delay={0.3}
 					/>
 				</div>
-
-				<motion.div
-					initial={{ opacity: 0, y: 20 }}
-					animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-					transition={{ duration: 0.7, delay: 0.5 }}
-					className="mt-12 text-center"
-				>
-					<button className="bg-gradient-to-r from-[#F04339] to-[#FF6B5B] hover:from-[#FF6B5B] hover:to-[#F04339] text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-						Conheça Nossos Planos
-					</button>
-				</motion.div>
 			</div>
 		</section>
 	);

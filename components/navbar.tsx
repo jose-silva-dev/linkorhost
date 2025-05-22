@@ -189,6 +189,20 @@ export default function Navbar() {
 	const menuButtonRefs = useRef({});
 
 	const menuTimeout = useRef(null);
+	const menuRef = useRef(null);
+
+useEffect(() => {
+	const handleClickOutside = (event) => {
+		if (menuRef.current && !menuRef.current.contains(event.target)) {
+			setActiveMenu(null); // Fecha o menu se clicado fora
+		}
+	};
+
+	document.addEventListener("mousedown", handleClickOutside);
+	return () => {
+		document.removeEventListener("mousedown", handleClickOutside);
+	};
+}, []);
 
 	const handleMouseEnterMenu = (menu) => {
 		if (menuTimeout.current) clearTimeout(menuTimeout.current);
@@ -233,7 +247,7 @@ export default function Navbar() {
 		if (!activeItem) return null;
 
 		return (
-			<div className="p-4 bg-gray-950 rounded-lg">
+			<div className="p-4 bg-gray-950 rounded-lg" ref={menuRef}>
 				<h3 className="text-lg font-semibold mb-3">{activeItem.title}</h3>
 				<div className="space-y-2">
 					{activeItem.items.map((subItem, index) => (

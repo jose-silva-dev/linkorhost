@@ -81,7 +81,7 @@ export function GameServerComparison() {
 
 						<div className="relative h-[300px] bg-black">
 							<video
-								src="https://www.exitlag.com/templates/exit-lag/img/promotion/ExlV5/Exitlag_V5_ON.webm"
+								src="/promotion/videos/Gamer_Linkor_ON.webm"
 								className="object-cover opacity-70 z-0"
 								autoPlay
 								muted
@@ -125,7 +125,7 @@ export function GameServerComparison() {
 
 							<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
 								<div className="text-green-400 font-bold text-lg bg-black/50 px-4 py-2 rounded-lg backdrop-blur-sm">
-									VANTAGEM NO PVP
+									OBTENHA O MELHOR PVP
 								</div>
 							</div>
 						</div>
@@ -199,7 +199,7 @@ export function GameServerComparison() {
 
 						<div className="relative h-[300px] bg-black">
 							<video
-								src="https://www.exitlag.com/templates/exit-lag/img/promotion/ExlV5/Exitlag_V5_OFF.webm"
+								src="/promotion/videos/Gamer_Linkor_OFF.webm"
 								className="object-cover opacity-70"
 								autoPlay
 								muted

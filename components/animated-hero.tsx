@@ -11,6 +11,7 @@ import {
 	Shield,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function AnimatedHero() {
 	const [isVisible, setIsVisible] = useState(false);
@@ -142,7 +143,8 @@ export default function AnimatedHero() {
 								whileTap={{ scale: 0.95 }}
 								transition={{ type: "spring", stiffness: 400, damping: 10 }}
 							>
-								<Button
+								 <Link href="#plans-website">
+									<Button
 									size="lg"
 									className="bg-gradient-to-r from-[#F04339] to-[#FF6B5B] hover:from-[#FF6B5B] hover:to-[#F04339] group"
 								>
@@ -157,7 +159,8 @@ export default function AnimatedHero() {
 									>
 										<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
 									</motion.div>
-								</Button>
+									</Button>
+								 </Link>
 							</motion.div>
 						</motion.div>
 

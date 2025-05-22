@@ -15,7 +15,7 @@ export function FlexiblePlans() {
 		siteConfig.vpsPlans[0];
 
 	return (
-		<section id="planos-vps" className="py-16 bg-[#0C0C17] w-full">
+		<section id="planos-vps" className="py-16 bg-[#0C0C17] w-full scroll-mt-28">
 	<div className="container px-4 md:px-6 mx-auto">
 		<div className="flex flex-col items-start max-w-5xl mx-auto">
 			<h2 className="text-4xl font-bold text-white mb-4 mx-auto">
