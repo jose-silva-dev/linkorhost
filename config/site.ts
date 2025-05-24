@@ -375,6 +375,37 @@ export const siteConfig = {
 				},
 			],
 		},
+				{
+			id: "intel2",
+			name: "Intel® Xeon® E5-2680 v4",
+			allPlans: "https://app.linkor.host/store/vps-intel-dual-xeon-e5-2680-v4",
+			plans: [
+				{
+					id: "starter",
+					name: "VPS INTEL - E52680 - 4R",
+					link: "https://app.linkor.host/store/vps-intel-dual-xeon-e5-2680-v4/vps-intel-e52680-4r",
+					specs: "2 vCPU • 4GB RAM DDR4 • 40GB SSD",
+					price: "49,95",
+					color: "#3B82F6",
+				},
+				{
+					id: "advanced",
+					name: "VPS INTEL - E52680 - 8R",
+					link: "https://app.linkor.host/store/vps-intel-dual-xeon-e5-2680-v4/vps-intel-e52680-8r",
+					specs: "4 vCPU • 8GB RAM DDR4 • 60GB SSD",
+					price: "99,95",
+					color: "#3B82F6",
+				},
+				{
+					id: "enterprise",
+					name: "VPS INTEL - E52680 - 12R",
+					link: "https://app.linkor.host/store/vps-intel-dual-xeon-e5-2680-v4/vps-intel-e52680-12r",
+					specs: "6 vCPU • 12GB RAM DDR4 • 80GB SSD",
+					price: "149,95",
+					color: "#3B82F6",
+				},
+			],
+		},
 	],
 	partners: [
 		{

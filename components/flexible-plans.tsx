@@ -31,7 +31,7 @@ export function FlexiblePlans() {
 			</div>
 
 					{/* Seleção de processadores */}
-					<div className="flex flex-wrap gap-4 mb-8 w-full justify-center">
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pb-10 mx-auto">
 						{siteConfig.vpsPlans.map((proc) => (
 							<button
 								key={proc.id}
