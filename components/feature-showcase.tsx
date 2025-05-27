@@ -37,7 +37,7 @@ export function FeatureShowcase() {
 			title: "Desempenho Excepcional",
 			link: "#",
 			description:
-				"Servidores equipados com processadores AMD Ryzen™ 9 e Intel® Xeon® Platinum, armazenamento NVMe e rede de 10Gbps para garantir velocidade máxima para suas aplicações.",
+				"Servidores equipados com processadores AMD Ryzen™ 9 e Intel Xeon®, armazenamento NVMe e rede de 10Gbps para garantir velocidade máxima para suas aplicações.",
 			icon: <Zap className="h-6 w-6" />,
 			image: "/cloud-infrastructure-3d.png",
 			color: "from-blue-500 to-purple-600",

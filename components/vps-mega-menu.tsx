@@ -46,7 +46,7 @@ export default function ServidoresMegaMenu() {
             </Link>
           ))}
         </div>
-        <Link href="/vps-amd-7900x">
+        <Link href="https://app.linkor.host/store/vps-gamer-amd">
           <div className="relative bg-gradient-to-b from-purple-500 to-pink-500 h-52 rounded-lg">
             <div className="absolute bottom-0 p-4 text-white">
               <div className="mb-2">
@@ -54,7 +54,7 @@ export default function ServidoresMegaMenu() {
                   <Server size={32} className="text-white" />
                 </div>
               </div>
-              <p className="text-lg font-bold">AMD Ryzen 9 7900X</p>
+              <p className="text-lg font-bold">AMD Ryzen 9</p>
               <p className="text-sm">Nossa melhor máquina para seu servidor.</p>
             </div>
           </div>

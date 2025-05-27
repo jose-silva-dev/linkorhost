@@ -41,22 +41,16 @@ const ServidoresMegaMenu = () => {
 					</div>
 					{[
 						{
-							href: "https://app.linkor.host/store/vps-amd-ryzen-9-7900x",
+							href: "https://app.linkor.host/store/vps-gamer-intel",
 							icon: Box,
-							title: "AMD Ryzen™ 9 7900X",
-							description: "Para quem busca ultra-performance.",
-						},
-						{
-							href: "https://app.linkor.host/store/vps-amd-ryzen-9-5900x",
-							icon: Box,
-							title: "AMD Ryzen™ 9 5900X",
-							description: "Para quem busca performance.",
-						},
-						{
-							href: "https://app.linkor.host/store/vps-intel-qct-de-alta-densidade",
-							icon: Box,
-							title: "Intel(R) Xeon(R) Platinum",
+							title: "INTEL XEON®",
 							description: "Para quem busca confiabilidade.",
+						},
+						{
+							href: "https://app.linkor.host/store/vps-gamer-amd",
+							icon: Box,
+							title: "AMD RYZEN™",
+							description: "Para quem busca ultra-performance.",
 						},
 						// {
 						// 	href: "/redm",

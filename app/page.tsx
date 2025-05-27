@@ -162,8 +162,8 @@ export default function Home() {
 									Infraestrutura Otimizada
 								</h3>
 								<p className="text-gray-400 mb-4">
-									Servidores de alto desempenho com processadores AMD Ryzen™ 9
-									7900X, armazenamento NVMe e configurações otimizadas para
+									Servidores de alto desempenho com processadores AMD Ryzen™ 9,
+									armazenamento NVMe e configurações otimizadas para
 									desenvolvimento.
 								</p>
 								<ul className="space-y-2 mb-6">
