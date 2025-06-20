@@ -6,7 +6,6 @@ import { StatsCounter } from "@/components/stats-counter"
 import { PromoCard } from "@/components/promo-card"
 import { PerformanceMetrics } from "@/components/performance-metrics"
 import { HostingPlans } from "@/components/hosting-plans"
-import { FlexiblePlans } from "@/components/flexible-plans"
 import { PremiumContentAccess } from "@/components/premium-content-access"
 import { GameServerComparison } from "@/components/game-server-comparison"
 import { CustomerTestimonials } from "@/components/customer-testimonials"
@@ -98,6 +97,7 @@ export default function Home() {
 
       {/* Hosting Plans Section */}
       <HostingPlans />
+
       <section className="bg-[#0C0C17] w-full py-4 px-6 flex flex-col md:flex-row items-center justify-center gap-8 mx-auto">
         <p className="text-gray-300 text-center md:text-left font-medium text-sm md:text-base">
           Pagamento facilitado em até <span className="text-white font-semibold">12x no cartão</span>
@@ -109,9 +109,6 @@ export default function Home() {
           <Image width={48} height={48} src="./mastercard.png" alt="MasterCard" />
         </div>
       </section>
-
-      {/* Pricing Section */}
-      <FlexiblePlans />
 
       {/* Premium Content Access  */}
       <PremiumContentAccess />

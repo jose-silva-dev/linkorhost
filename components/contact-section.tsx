@@ -15,7 +15,7 @@ export function ContactSection() {
       title: "WhatsApp",
       description: "Resposta em minutos",
       buttonText: "Conversar agora",
-      href: "https://wa.me/5511523601234",
+      href: "https://wa.me/551152360123",
     },
     {
       icon: <Phone className="h-8 w-8" />,
@@ -41,7 +41,7 @@ export function ContactSection() {
             Pronto para levar seu negócio ao próximo nível?
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Fale com nossos especialistas e descubra como a Linkor pode transformar sua infraestrutura digital
+            Fale com nossos especialistas e descubra como a Linkor pode transformar sua infraestrutura
           </p>
         </div>
 

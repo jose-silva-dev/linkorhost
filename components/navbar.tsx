@@ -18,16 +18,22 @@ const ServidoresMegaMenu = () => {
           </div>
           {[
             {
-              href: "https://app.linkor.host/store/vps-gamer-intel",
+              href: "/vps",
               icon: Box,
-              title: "INTEL XEON®",
-              description: "Para quem busca confiabilidade.",
+              title: "Servidores VPS",
+              description: "Para quem busca liberdade",
             },
             {
-              href: "https://app.linkor.host/store/vps-gamer-amd",
+              href: "#",
               icon: Box,
-              title: "AMD RYZEN™",
-              description: "Para quem busca ultra-performance.",
+              title: "Servidores VDS",
+              description: "Para quem busca desempenho",
+            },
+            {
+              href: "https://app.linkor.host/store/semi-dedicado-intel",
+              icon: Box,
+              title: "Semi Dedicados",
+              description: "Para quem busca muitos recursos",
             },
             // {
             // 	href: "/redm",
